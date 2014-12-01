@@ -1,6 +1,6 @@
 {{ if template:has_breadcrumbs }}
-    {{ if theme:options:show_breadcrumbs == 'yes' }}
-        <p class="breadcrumbs">
+{{ if { url:segments segment="1" } == 'products-and-services' }}
+        <p class="breadcrumbs ">
         {{ template:breadcrumbs }}
 			{{ if uri }}
 				{{ url:anchor segments=uri title=name }}&nbsp;>&nbsp;
@@ -9,5 +9,6 @@
 			{{ endif }}
 		{{ /template:breadcrumbs }}
 		</p>
-	{{ endif }}
+		<hr class="devider">
+{{ endif }}
 {{ endif }}

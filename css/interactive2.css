@@ -4,24 +4,20 @@
 
 body {
   padding-bottom: 40px;
-  color: #5a5a5a;
-  background: #F4F4F4;
+  background: #f3f3f3;
+
 }
 
-.container{
-  background: #fff;
-}
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
 .navbar-wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 20;
+z-index: 9999;
+height: 4em;
+
+background: rgba(0,0,0,0.6);
 }
 
 /* Flip around the padding for proper display in narrow viewports */
@@ -29,14 +25,63 @@ body {
   padding-right: 0;
   padding-left: 0;
 }
-.navbar-wrapper .navbar {
-  padding-right: 15px;
-  padding-left: 15px;
-}
+
 .navbar-wrapper .navbar .container {
   width: auto;
 }
 
+.navbar-inverse .navbar-nav>.active>a, 
+.navbar-inverse .navbar-nav>.active>a:hover,
+ .navbar-inverse .navbar-nav>.active>a:focus {
+color: #fff;
+border-bottom: 2px solid #1fb4da;
+text-transform: uppercase;
+font-weight: bold;
+}
+
+
+.navbar-brand {
+float: left;
+height: 50px;
+padding: 0px 0px; 
+font-size: 18px;
+line-height: 20px;
+}
+
+.navbar-brand>img{
+  height: 50px;
+}
+.navbar-inverse .navbar-nav>li>a{
+  color: #1fb4da;
+}
+
+.dropdown-menu{
+  width: 500px;
+  background: #444;
+  background: rgb(0,0,0,0.6);
+}
+.dropdown-menu:hover{
+  display: block;
+  visibility: visible;
+}
+.dropdown-menu .section{
+
+  border-right: 1px solid #ccc;
+}
+.dropdown-menu .header{
+  color:  #1fb4da;
+  text-align: center;
+  margin-bottom: 3px;
+}
+
+.dropdown-menu ul a{
+  text-transform: lowercase;
+  color: #ccc;
+}
+
+.nav li.dropdown:hover > ul.dropdown{
+  display: block;
+}
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
@@ -44,11 +89,13 @@ body {
 /* Carousel base class */
 .carousel {
   height: 500px;
-  margin-bottom: 60px;
+  margin-bottom: 0px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   z-index: 10;
+background: #444;
+background: rgba(0,0,0,0.3);
 }
 
 /* Declare heights because of positioning of img element */
@@ -57,13 +104,17 @@ body {
   background-color: #777;
 }
 .carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 500px;
-  margin-right: -15px;
-margin-left: -15px;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: 50% 50%;
+width: 100%;
+height: 100%;
+position: absolute;
+background-repeat: no-repeat;
+top: 0;
+left: 0;
+z-index: 1;
+
 }
 
 
@@ -121,6 +172,8 @@ margin-left: -15px;
     border-radius: 4px;
   }
 
+
+
   /* Bump up size of carousel content */
   .carousel-caption p {
     margin-bottom: 20px;
@@ -140,19 +193,21 @@ margin-left: -15px;
 }
 
 
-.homeboxe {
-  min-height: 300px;
-height: 100%;
+
+.homeboxe{
+height: 200px;
+line-height: 150px;
 border: 4px solid #F8F5F0;
 cursor: pointer;
 padding: 0;
-background: #E9EBEF;
+background: #444;
+background: rgb(0,0,0,0.4);
 
 }
 
 .homeboxe h2 {
 color: #fff;
-background:   #5060BA ;
+background:   #00698B; /**changed color **/
 position: absolute;
 bottom: 0;
 font-size: 12px;
@@ -161,6 +216,7 @@ width: 100%;
 text-align: center;
 padding: 3px 10px;
 text-transform: uppercase;
+line-height: 30px;
 
 }
 
@@ -168,35 +224,49 @@ text-transform: uppercase;
   font-size: 8em;
   margin: 0 auto;
   text-align: center;
-  color: #5060BA;
-  padding: 10% 30%;
+  color:#1fb4da;
+  padding: 10% 35%;
 }
 
 
-.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
-color: #fff;
-background-color: #00698B;
-border-bottom: 2px solid #1fb4da;
-text-transform: uppercase;
-font-weight: bold;
-}
-
-.nav{
-  background-color: #F4F4F4;
-  font-weight: bold;
-}
-.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
-color: #fff;
-background-color: #00698B;
-}
-
-.navbar-brand {
-float: left;
-height: 50px;
-padding: 0px 0px; 
-font-size: 18px;
-line-height: 20px;
+/*change the color of the slogan heading */
+.slogan__heading{
+ color: #00698B;
 }
 
 
+
+#welcome .jumbotron {
+background: #999;
+color:#1fb4da;
+}
+.jumbotron .container {
+max-width: 100%;
+}
+
+.page{
+
+  font-size: 20px;
+  line-height: 1.6em;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+.page h2{
+  text-align: center;
+  font-size: 2.8em;
+  color: #00698B;
+  margin-bottom: 20px;
+
+}
+.page p{
+  font-size: 20px;
+  line-height: 1.6em;
+  padding: 10px;
+}
+
+.devider{
+
+  border-bottom: 1px solid #ccc;
+}
 

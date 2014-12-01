@@ -14,23 +14,48 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav pull-right">
-                <li class="active"><a href="#">Who we are</a></li>
+                <li class="{{ if { url:segments segment="1" } == '' }}active{{endif}}"><a href="{{url:base}}">Home</a></li>
+
+                <li class="{{ if { url:segments segment="1" } == 'who-we-are' }}active{{endif}}"><a href="{{url:base}}who-we-are">Who we are</a></li>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Products and Services <span class="caret"></span></a>
+                  <a href="#" class="{{ if { url:segments segment="1" } == 'products-and-services' }}active{{endif}}dropdown-toggle " data-toggle="dropdown"
+                  data-hover="dropdown" data-delay="500" role="button" aria-expanded="false">Products and Services <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
+                      <div class="row">
+    
+      <div class="col-xs-4 col-sm-4 section">
+      <div class="header">Mobile QUIZ</div>
+      <ul>
+        <li><a href="{{url:base}}products-and-services/mobile-quiz/mwigane">MWIGANE</a></li>
+        <li><a href="{{url:base}}products-and-services/mobile-quiz/yitahane">YITAHANE</a></li>
+        <li><a href="{{url:base}}products-and-services/mobile-quiz/umufana">UMUFANA</a></li>
+        <li><a href="{{url:base}}products-and-services/mobile-quiz/urulavu">URULAVU</a></li>
+      </ul>
+      </div>
+
+      <div class="col-xs-4 col-sm-4 section">
+    <div class="header">SMS SUBSCRIPTION</div>
+      <ul>
+        <li><a href="{{url:base}}products-and-services/sms-subscription/interactive-info">Interactive Info</a></li>
+      </ul>
+      </div>
+
+        <div class="col-xs-4 col-sm-4 ">
+    <div class="header">Integrated Voice Response(IVR)</div>
+      <ul>
+        <li><a href="{{url:base}}products-and-services/integrated-voice-response/voice-twitter">Voice Twitter</a></li>
+      </ul>
+      </div>
+    
+     
+    
+    </div>
                   </ul>
                 </li>
 
-                <li><a href="portfolios">Portfolios</a></li>
-                <li><a href="#contact">Partners</a></li>
-                <li><a href="contact">Contact us</a></li>
+                <li class="{{ if { url:segments segment="1" } == 'portfolios' }}active{{endif}}"><a href="{{url:base}}portfolios">Portfolios</a></li>
+                <li class="{{ if { url:segments segment="1" } == 'partners' }}active{{endif}}"><a href="{{url:base}}partners">Partners</a></li>
+                <li class="{{ if { url:segments segment="1" } == 'contact-us' }}active{{endif}}"><a href="{{url:base}}contact-us">Contact us</a></li>
                 {{ navigation:links group="header" }}
               </ul>
             </div>
