@@ -47,9 +47,24 @@ padding: 0px 0px;
 font-size: 18px;
 line-height: 20px;
 }
-
+.navbar-inverse .navbar-brand:hover{
+  border: none;
+}
+.navbar-inverse .navbar-brand > span{
+float: left;
+display: block;
+padding: 15px 15px;
+color: #1fb4da;
+font-size: 14px;
+font-weight: bold;
+}
+.navbar-inverse .navbar-brand > span:hover{
+border: none;
+color: #1fb4da;
+}
 .navbar-brand>img{
   height: 50px;
+  float: left;
 }
 .navbar-inverse .navbar-nav>li>a{
   color: #1fb4da;
