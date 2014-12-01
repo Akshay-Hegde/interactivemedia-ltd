@@ -91,6 +91,13 @@ color: #5fb4da;
   margin-bottom: 3px;
 }
 
+.dropdown-menu .header a{
+  color:  #1fb4da;
+}
+.dropdown-menu .header a:hover{
+  color:  #fff;
+}
+
 .dropdown-menu ul a{
   text-transform: lowercase;
   color: #ccc;
