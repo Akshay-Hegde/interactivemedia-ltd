@@ -55,12 +55,14 @@ float: left;
 display: block;
 padding: 15px 15px;
 color: #1fb4da;
-font-size: 14px;
+font-size: 18px;
 font-weight: bold;
+text-transform: none;
 }
 .navbar-inverse .navbar-brand > span:hover{
 border: none;
-color: #1fb4da;
+color: #5fb4da;
+
 }
 .navbar-brand>img{
   height: 50px;
